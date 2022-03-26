@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHORCADO</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="canvas.js" defer></script>
+    
+    
+
+</head>
+<body>
+    
+    <div style="text-align:center; margin: 50px 0px;">
+        <h1 class="titulo">Ahorcado</h1>
+        <button class="botones" id="iniciar-juego" onclick="inicio()">INICIAR JUEGO</button>
+    </div>
+
+    <div style="text-align: center;"> 
+        <input class="text" autofocus type="text" id="agregar-palabra" placeholder="Escriba una nueva palabra" >
+        <button id="btn-agregar" class="botones" onclick="agregarPalabra()">AGREGAR PALABRA</button> 
+    </div>
+   
+    <div style="text-align:center;">
+        <canvas id="canvas"  class="oculto" width="1200px" height="800px"></canvas>
+    </div>         
+        
+
+    
+    <script>
+        window.scrollTo(0,0);
+        
+        var palabras=["CAMION","MESA","GORRA","RENO","LUNA","LAGO","TORTUGA","SOPA","MELON","CARAMELO","JUEGO","REGLA","LAPIZ","GOMA","LINTERNA","PANADERIA"]
+        function agregarPalabra(){
+            var palabraDigitada=document.querySelector("#agregar-palabra" ).value.toUpperCase();
+            
+            if(palabraDigitada.match(/^[a-zñ]$/i) && !palabras.includes(palabraDigitada)){
+                console.log(palabraDigitada);
+                palabras.push(palabraDigitada);
+                document.querySelector("#agregar-palabra").value="";
+                document.querySelector("#agregar-palabra").focus();
+                console.log(palabras);
+            }else{
+                console.log("la palabra que ingreso tiene numeros, o ya se encuentra en la lista");
+                alert("OOPS!! INGRESE UNA PALABRA, SIN NUMEROS NI SIGNOS, O LA PALABRA YA ESTA EN LA LISTA");
+            }            
+        }
+    </script>  
+    
+
+</body>
+<footer>
+    <div id="footer"> <p>Diseñado para el Proyecto Challenger-Oracle-ONE Web realizado por Ríos Cristian</p>
+    </div>
+  </footer>
+</html>
