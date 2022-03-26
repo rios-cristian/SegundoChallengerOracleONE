@@ -149,7 +149,7 @@ function ganador(){
 }
 function perdedor(){
 	pincel.fillStyle = "red";
-	pincel.font="50px arial center" ;
+	pincel.font="50px arial center";
 	pincel.fillText("Fin del juego ",500,250);
 	pincel.fillText("La palabra era:",500,300);
 	pincel.fillText(palabraElegida,500,360)
