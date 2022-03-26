@@ -145,12 +145,12 @@ function letrasInsertadas(x,y){
 function ganador(){
 	pincel.fillStyle = "green";
 	pincel.font="70px arial center" ;
-	pincel.fillText("Felicidades, Ganaste",500,300);
+	pincel.fillText("Ganaste, Felicidades!",500,300);
 }
 function perdedor(){
 	pincel.fillStyle = "red";
 	pincel.font="50px arial center" ;
-	pincel.fillText("El juego ha terminado.",500,250);
+	pincel.fillText("Fin del juego ",500,250);
 	pincel.fillText("La palabra era:",500,300);
 	pincel.fillText(palabraElegida,500,360)
 }

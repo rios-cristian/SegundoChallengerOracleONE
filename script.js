@@ -94,7 +94,7 @@ function ingresarLetra(pulsar){
 						posicionLetra=posicionLetra+90;
 					}
 					if(letrasCorrectas.length==palabraSeparada.length){
-						console.log("Felicidades, ganaste");
+						console.log("Ganaste, Felicidades!");
 						ganador()
 						document.removeEventListener("keyup",ingresarLetra);
 					}
